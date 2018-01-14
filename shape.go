@@ -42,6 +42,15 @@ func printArea(s shape){
 }
 
 
+func totalArea(shapes ...shape) float64{
+	var a float64
+	for _, s := range shapes{
+		a += s.area()
+	}
+	return a
+}
+
+
 func init(){
 	sq := square{10}
 	re := rect{12, 23}
@@ -54,5 +63,6 @@ func init(){
 	printArea(re)
 	printArea(c)
 
+	fmt.Println("Total Area: ", totalArea(sq, re, c))
 
 }
