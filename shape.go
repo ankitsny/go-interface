@@ -37,12 +37,22 @@ func (c circle) area() float64{
 }
 
 
+func printArea(s shape){
+	fmt.Println(s.area())
+}
+
 
 func init(){
 	sq := square{10}
 	re := rect{12, 23}
 	c := circle{17}
-	fmt.Println("Square:", sq.area())
-	fmt.Println("Rect: ", re.area())
-	fmt.Println("Circle: ", c.area())
+	// fmt.Println("Square:", sq.area())
+	// fmt.Println("Rect: ", re.area())
+	// fmt.Println("Circle: ", c.area())
+
+	printArea(sq)
+	printArea(re)
+	printArea(c)
+
+
 }
